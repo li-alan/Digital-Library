@@ -1,0 +1,119 @@
+html{
+    background-color:darkgray;
+}
+
+/* button{
+
+    border-style: solid;
+    border-color: gray;
+    height:50px;
+    width: 80px;
+    margin: 0px 10px;
+    background-color: #d8e9f9;
+    
+}
+*/
+
+td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+}
+header{
+    background-color:white;
+    margin: 0%;
+    width: 100%;
+    border: 2px solid black;
+}
+
+table{
+    background-color: white;
+}
+
+/* button:hover{
+    background-color:gray;
+}  */
+
+#logo{
+    display:block;
+    /* margin: 20vh auto 5vh; */
+} 
+
+.addBookButton{
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    /* width: 280px; */
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    font-size: 1vw;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container input[type=text]     {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.form-container .closePopUpButton{
+    background-color: red;
+    color: white;
+}
+
+/* .form-container .submitButton{
+    background-color: green;
+    color: white;
+} */
+
+.centered{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.contanier{
+    display:grid;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>A Library Simulator</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class='centered'>
+            <h1>Your Library Collection</h1>
+            <!-- <img id="logo" src="/istockphoto-949118068-612x612.jpg" alt="Image of Book"> -->
+            <!-- <h1>This is a webpage created to emulate a library 
+                collection that you can add books to.</h1> -->
+        </header>
+
+
+
+
+        <!-- For Listing the books -->
+        <div class="container">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read?</th>
+                        <th>Change Read Status</th>
+                        <!-- <th>Finished?</th>
+                        <th>Delete</th> -->
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <button type='button' class='addBookButton'>+</button>
+        <div class="form-popup" id="myForm">
+            <form  class="form-container">
+                <h2>Enter Book Information</h2>
+                <label for="Title">Title</label>
+                <input type="text" name="Title" id="Title" required>
+                <label for="Author">Author</label>
+                <input type="text" name="Author" id="Author" required>
+                <label for="Pages">Pages</label>
+                <input type="text" name="Pages" id="Pages" required>
+                <input type="checkbox" name="Read" id="Read" required>
+                <label for="Read">Finished Reading?</label>
+                <button type="button" class="submitButton">Submit</button>
+                <button type="button" class="closePopUpButton">Close</button>
+            </form>
+        </div>
+        <script src="obj.js"></script>
+    </body>
+
+</html>
