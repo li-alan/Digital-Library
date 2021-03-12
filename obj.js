@@ -1,5 +1,7 @@
 let myLibrary = [];
 
+
+
 class Book {
     constructor(title, author, pages, read) {
         this.title = title;
@@ -21,6 +23,13 @@ function closeForm(){
     document.getElementById("myForm").style.display="none";
 }
 
+
+
+/*EXAMPLE BOOK*/
+const testBook = new Book('The Giver','Lois Lowry','240',false);
+addBookToLibrary(testBook);
+buildTable(myLibrary);
+
 // FIX THIS
 //////////////////////////////
 //////////////////////////////
@@ -31,16 +40,34 @@ function buildTable(data){
                         <td>${data[i].title}</td>
                         <td>${data[i].author}</td>
                         <td>${data[i].pages}</td>
-                        <td>${data[i].read}</td>
-                        <td><button type="button" id=${i}>Toggle Read Status</button></td>
-                   </tr>`
-                   
+                        <td id=${i}>${data[i].read}</td>
+                        <td><button type="button" class="toggle" >Toggle Read Status</button></td>
+                   </tr>`     
         table.innerHTML+=row;
     }
 }
 
 
 
+function toggleRead(id){
+    if(myLibrary[id].read){
+        myLibrary[id].read=false;
+    }else{
+        myLibrary[id].read=true;
+    }
+
+    var item = document.getElementById("myTable");
+
+    item.rows[id].cells[3].innerHTML=myLibrary[id].read;
+}
+
+const toggleButton=document.getElementsByClassName('toggle');
+for(let i=0;i<toggleButton.length;i++){
+    toggleButton[i].addEventListener('click',function(){
+        console.log(i);
+        toggleRead(i);
+    });
+}
 
 /*
 THIS IS FOR THE POP UP FORM
@@ -60,13 +87,16 @@ submitButton.addEventListener('click',()=>{
     const bookToAdd=new Book(title,author,pages,read);
     addBookToLibrary(bookToAdd);
     buildTable(myLibrary);
+    const toggleButton=document.getElementsByClassName('toggle');
+    for(let i=toggleRead.length-1;i<toggleButton.length;i++){
+        toggleButton[i].addEventListener('click',function(){
+            console.log(i);
+            toggleRead(i);
+        });
+    }
     closeForm();
 });
 
 
 
 
-/*EXAMPLE BOOK*/
-const testBook = new Book('The Giver','Lois Lowry','240',false);
-addBookToLibrary(testBook);
-buildTable(myLibrary);
