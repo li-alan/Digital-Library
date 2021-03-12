@@ -5,3 +5,6 @@ This will bring up a form where you will enter your book's title, author, and pa
 After pressing submit, your book will appear on the list.
 To toggle whether or not you have finished reading a book, simply press the 'Toggle Read 
 Status' button on the row of your chosen book.
+
+
+![screenshot](./DigitalLibraryScreenshot.png )
